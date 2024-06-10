@@ -1,11 +1,516 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO 관련 -->
+<meta name="robots" content="index,follow">
+<title>김영태♥홍승희 결혼합니다.</title>
+<meta name="author" content="">
+<meta name="Keywords" content="김영태♥홍승희 결혼합니다.">
+<meta property="og:type" content="website" />
+<link rel="icon" href="./img/ico_picon.svg" sizes="152x152">
+<!-- 웹폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+<script src="/js/swiper-bundle.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/movie.js"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=nivuo8ail0"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+  // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+  Kakao.init('9d2cdd65079bde0b0cc14b0aa2c5099a');
+
+  // SDK 초기화 여부를 판단합니다.
+  console.log(Kakao.isInitialized());
+
+  function kakaoShare() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '김영태♥홍승희 결혼합니다.',
+        description: '2023년 5월 6일 토요일 오전 11시 30분 아트라움웨딩 4층 마리에가든홀',
+        imageUrl: 'http://invite.dothome.co.kr/img/main.jpg',
+        link: {
+          mobileWebUrl: '카카오공유하기 시 클릭 후 이동 경로',
+          webUrl: '카카오공유하기 시 클릭 후 이동 경로',
+        },
+      },
+      buttons: [
+        {
+          title: '모바일청첩장 보기',
+          link: {
+            mobileWebUrl: 'http://invite.dothome.co.kr/',
+            webUrl: 'http://invite.dothome.co.kr/',
+          },
+        },
+      ],
+      // 카카오톡 미설치 시 카카오톡 설치 경로이동
+      installTalk: true,
+    })
+  }
+</script>
+<link href="/css/default.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/swiper-bundle.min.css" rel="stylesheet">
+<!--<script>
+$(window).load(function () {
+    $('body').sakura();
+});
+</script>-->
 </head>
+
 <body>
-    asdf
+  <header>
+      <div id="invite_top">
+          <div class="top_day">
+              <h1>2023.05.06</h1>
+              <h2>김영태 & 홍승희</h2>
+          </div>
+          <div class="top_pic">
+              <img src="/img/main.jpg" alt="메인사진">
+          </div>
+          <div class="top_hall">
+              2023년 5월 6일 토요일 오전 11시 30분<br>아트라움웨딩 4층 마리에가든홀
+          </div>
+      </div>
+  </header>
+  
+  <section>
+      <div id="invite_in">
+          <div class="in_text">
+              <div class="title">
+                  <h3><img src="/img/heart.svg" class="ico_img"></h3>
+                  <h4>초대합니다</h4>
+              </div>
+              <div class="content">
+                  저희 두 사람이 새로운 인생을<br>시작하는 첫날을<br>함께 해주셔서 감사합니다.<br>예쁘게 열심히 살아가는 모습으로<br>여러분의 축하에 보답하겠습니다.
+              </div>
+              <div class="span_line"></div>
+              <div class="name">
+                 <p>김왕수 · 김명숙<span>의 아들</span>영태</p>
+                  <p>홍해식 · 강현희<span>의 딸</span>승희</p>
+              </div>
+              <div class="phone">연락하기</div>
+              <div class="call_popup">
+                  <div class="call_box">
+                     <div class="close"></div>
+                      <ul>
+                          <li>
+                              <div class="calltext">신랑</div>
+                              <div class="callname">김영태</div>
+                              <div class="callname icon">
+                                  <a href="tel:00000000000"><img src="/img/call_blue.svg" class="ico_img3"></a>
+                                  <a href="sms:00000000000"><img src="/img/sms_blue.svg" class="ico_img3"></a>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="calltext">신랑 아버지</div>
+                              <div class="callname">김왕수</div>
+                              <div class="callname icon">
+                                  <a href="tel:00000000000"><img src="/img/call_blue.svg" class="ico_img3"></a>
+                                  <a href="sms:00000000000"><img src="/img/sms_blue.svg" class="ico_img3"></a>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="calltext">신랑 어머니</div>
+                              <div class="callname">김명숙</div>
+                              <div class="callname icon">
+                                  <a href="tel:00000000000"><img src="/img/call_blue.svg" class="ico_img3"></a>
+                                  <a href="sms:00000000000"><img src="/img/sms_blue.svg" class="ico_img3"></a>
+                              </div>
+                          </li>
+                      </ul>
+                      <ul>
+                          <li>
+                              <div class="calltext">신부</div>
+                              <div class="callname">홍승희</div>
+                              <div class="callname icon">
+                                  <a href="tel:00000000000"><img src="/img/call_pink.svg" class="ico_img3"></a>
+                                  <a href="sms:00000000000"><img src="/img/sms_pink.svg" class="ico_img3"></a>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="calltext">신부 아버지</div>
+                              <div class="callname">홍해식</div>
+                              <div class="callname icon">
+                                  <a href="tel:00000000000"><img src="/img/call_pink.svg" class="ico_img3"></a>
+                                  <a href="sms:00000000000"><img src="/img/sms_pink.svg" class="ico_img3"></a>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="calltext">신부 어머니</div>
+                              <div class="callname">강현희</div>
+                              <div class="callname icon">
+                                  <a href="tel:00000000000"><img src="/img/call_pink.svg" class="ico_img3"></a>
+                                  <a href="sms:00000000000"><img src="/img/sms_pink.svg" class="ico_img3"></a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <script>
+                $(".call_popup").hide();
+                $('.phone').on('click', function(){
+                    $(".call_popup").css("display","flex");
+                    $("body").css("overflow","hidden");
+                    $(".close").click(function(){
+                        $(".call_popup").hide();
+                        $("body").css("overflow","auto");
+                    });
+                });
+              </script>
+          </div>
+          <div class="days">
+             <div class="days_tit">2023년 5월 6일</div>
+             <div class="days_cal">
+                 <div class="days_week">
+                     <div>일</div>
+                     <div>월</div>
+                     <div>화</div>
+                     <div>수</div>
+                     <div>목</div>
+                     <div>금</div>
+                     <div>토</div>
+                 </div>
+                 <div class="days_num">
+                     <div></div>
+                     <div>1</div>
+                     <div>2</div>
+                     <div>3</div>
+                     <div>4</div>
+                     <div>5</div>
+                     <div class="on">6</div>
+                     <div>7</div>
+                     <div>8</div>
+                     <div>9</div>
+                     <div>10</div>
+                     <div>11</div>
+                     <div>12</div>
+                     <div>13</div>
+                     <div>14</div>
+                     <div>15</div>
+                     <div>16</div>
+                     <div>17</div>
+                     <div>18</div>
+                     <div>19</div>
+                     <div>20</div>
+                     <div>21</div>
+                     <div>22</div>
+                     <div>23</div>
+                     <div>24</div>
+                     <div>25</div>
+                     <div>26</div>
+                     <div>27</div>
+                     <div>28</div>
+                     <div>29</div>
+                     <div>30</div>
+                     <div>31</div>
+                 </div>
+             </div>
+             <div id="count"></div>
+          </div>
+          
+          <div class="gallery">
+             <div class="title">
+                  <h3><img src="/img/heart.svg" class="ico_img"></h3>
+                  <h4>우리들의 사진</h4>
+              </div>
+             <div class="pic_box">
+                 <div class="pic_ori">
+                     <div class="pic_img" data-index="1">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="2">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="3">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="4">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="5">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="6">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="7">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="8">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="9">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                 </div>
+                 <div class="more_btn">더보기</div>
+                 <div class="pic_more">
+                     <div class="pic_img" data-index="10">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="11">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                     <div class="pic_img" data-index="12">
+                        <div class="centered">
+                            <img src="/img/pic.jpg">
+                         </div>
+                     </div>
+                 </div>
+                 <script>
+                    $(function(){
+                        $(".pic_more").hide();
+                        $(".more_btn").click(function(){
+                            $(".pic_more").fadeIn(1000);
+                            $(".more_btn").hide();
+                        });
+                    });
+                 </script>
+             </div>
+             <div class="pic_swiper">
+                 <div class="close"></div>
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div data-hash="slide1" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                      <div data-hash="slide2" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                      <div data-hash="slide3" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                      <div data-hash="slide4" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                      <div data-hash="slide5" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                      <div data-hash="slide6" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                      <div data-hash="slide7" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                      <div data-hash="slide8" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                      <div data-hash="slide9" class="swiper-slide"><img src="/img/pic.jpg"></div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+              </div>
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  spaceBetween: 0,
+                  hashNavigation: {
+                    watchState: true,
+                  },
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+                  
+                $(".pic_swiper").hide();
+                $('.pic_img').on('click', function(){
+                    $(".pic_swiper").css("display","flex");
+                    $("body").css("overflow","hidden");
+                    let dataIdx = $(this).data('index')
+                    swiper.slideTo(dataIdx)
+                    $(".close").click(function(){
+                        $(".pic_swiper").hide();
+                        $("body").css("overflow","auto");
+                    });
+                });
+              </script>
+          </div>
+          
+          <div class="account">
+              <div class="title">
+                  <h3><img src="/img/heart.svg" class="ico_img"></h3>
+                  <h4>마음 전하실 곳</h4>
+              </div>
+              <div class="account_pop">
+                  <div class="account_btn man">신랑측 계좌번호</div>
+                  <div class="account_box">
+                      <ul>
+                          <li>
+                              <div class="calltext">김영태</div>
+                              <div class="callname">농협</div>
+                              <div class="callacc">
+                                  <input id="accCopy1" value="0000000">
+                                  <button class="blue_line" onclick="copy_to_clipboard1()">복사하기</button>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="calltext">김왕수</div>
+                              <div class="callname">농협</div>
+                              <div class="callacc">
+                                  <input id="accCopy2" value="0000000">
+                                  <button class="blue_line" onclick="copy_to_clipboard2()">복사하기</button>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="account_btn woman">신부측 계좌번호</div>
+                  <div class="account_box">
+                      <ul>
+                          <li>
+                              <div class="calltext">홍승희</div>
+                              <div class="callname">농협</div>
+                              <div class="callacc">
+                                  <input id="accCopy3" value="0000000">
+                                  <button class="pink_line" onclick="copy_to_clipboard3()">복사하기</button>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="calltext">홍해식</div>
+                              <div class="callname">농협</div>
+                              <div class="callacc">
+                                  <input id="accCopy4" value="0000000">
+                                  <button class="pink_line" onclick="copy_to_clipboard4()">복사하기</button>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <script>
+                function copy_to_clipboard1() {    
+                  var copyText = document.getElementById('accCopy1');
+                  copyText.select();
+                  copyText.setSelectionRange(0, 99999);
+                  document.execCommand("Copy");
+                  alert('복사되었습니다 감사합니다.행복한 하루가 되세요♥');
+                }
+                  function copy_to_clipboard2() {    
+                  var copyText = document.getElementById('accCopy2');
+                  copyText.select();
+                  copyText.setSelectionRange(0, 99999);
+                  document.execCommand("Copy");
+                  alert('복사되었습니다 감사합니다.행복한 하루가 되세요♥');
+                }
+                  function copy_to_clipboard3() {    
+                  var copyText = document.getElementById('accCopy3');
+                  copyText.select();
+                  copyText.setSelectionRange(0, 99999);
+                  document.execCommand("Copy");
+                  alert('복사되었습니다 감사합니다.행복한 하루가 되세요♥');
+                }
+                  function copy_to_clipboard4() {    
+                  var copyText = document.getElementById('accCopy4');
+                  copyText.select();
+                  copyText.setSelectionRange(0, 99999);
+                  document.execCommand("Copy");
+                  alert('복사되었습니다 감사합니다.행복한 하루가 되세요♥');
+                }
+                </script>
+              <script>
+                $(".account_popup").hide();
+                $(".account_popup2").hide();
+                $('.man').on('click', function(){
+                    $(".account_popup").css("display","flex");
+                    $("body").css("overflow","hidden");
+                    $(".close").click(function(){
+                        $(".account_popup").hide();
+                        $("body").css("overflow","auto");
+                    });
+                });
+                $('.woman').on('click', function(){
+                    $(".account_popup2").css("display","flex");
+                    $("body").css("overflow","hidden");
+                    $(".close").click(function(){
+                        $(".account_popup2").hide();
+                        $("body").css("overflow","auto");
+                    });
+                });
+              </script>
+          </div>
+          
+          <div class="map">
+              <div class="title">
+                  <h3><img src="/img/heart.svg" class="ico_img"></h3>
+                  <h4>오시는 길</h4>
+              </div>
+              <div class="map_box">
+                  <div id="map" style="width:90%;height: 300px; margin:0 auto;"></div>
+                  <script>
+                    var map = new naver.maps.Map("map", {
+                      center: new naver.maps.LatLng(35.818957, 128.748064),
+                      zoom: 17,
+                    });
+                    var marker = new naver.maps.Marker({
+                      position: new naver.maps.LatLng(35.818957, 128.748064),
+                      map: map,
+                    });
+
+                    var map = new naver.maps.Map('map', mapOptions);
+                    </script>
+                    
+                    <div class="map_ico">
+                        <a href="https://naver.me/5AfyXoy4"><img src="/img/map1.png" class="ico_img4">네이버맵</a>    
+                        <a href="http://kko.to/Ykt_i3iKpz"><img src="/img/map2.png" class="ico_img4">카카오맵</a>    
+                        <a href="https://surl.tmap.co.kr/59606f41"><img src="/img/map3.png" class="ico_img4">티맵</a>    
+                    </div>
+                    
+                    <div class="map_guide">
+                        <ul>
+                            <li>
+                                <div class="guide_tit">아트라움웨딩 4층 마리에가든홀</div>
+                                <div class="guide_span">경상북도 경산시 계양로 38 | 경상북도 경산시 계양동 681</div>
+                            </li>
+                            <li>
+                                <div class="guide_tit">무료 셔틀버스 운행</div>
+                                <div class="guide_span">지하철 2호선 영남대역5번 출구 앞 출발(수시운행)</div>
+                            </li>
+                            <li>
+                                <div class="guide_tit">대구방면에서 오실 때</div>
+                                <div class="guide_span">지하철 2호선 사월역 2번출구에서 399번 환승(경산시민회관 하차)
+100, 990, 경산1, 경산2, 남산1, 509(계양네거리 하차)
+719, 980 영남대 하차 후 맞은편 지하철 5번 출구 앞 셔틀버스 이용</div>
+                            </li>
+                            <li>
+                                <div class="guide_tit">경산에서 오실 때</div>
+                                <div class="guide_span">399(경산시민회관 하차), 100, 990, 경산1, 남산1,
+509(경산중고등학교 하차), 809, 840 영남대 하차 후 셔틀버스 이용
+경산역에서 택시 10분 소요</div>
+                            </li>
+                        </ul>
+                    </div>
+
+              </div>
+          </div>
+          
+          <a id="kakao-link-btn" href="javascript:kakaoShare()">
+                <img class="ico_img" src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" /> 카카오톡공유하기
+          </a>
+          
+          <div class="copylight">영태♥승희 올림.<strong>Copyright 2023. jjeung</strong></div>
+          
+      </div>
+  </section>
+  
+  <footer>
+      
+  </footer>
+   
 </body>
-</html>

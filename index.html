@@ -439,16 +439,34 @@ $(window).load(function () {
               <div class="map_box">
                   <div id="map" style="width:90%;height: 300px; margin:0 auto;"></div>
                   <script>
-                    var map = new naver.maps.Map("map", {
-                      center: new naver.maps.LatLng(37.52802810000021, 126.91846635393618),
-                      zoom: 17,
-                    });
-                    var marker = new naver.maps.Marker({
-                      position: new naver.maps.LatLng(37.52802810000021, 126.91846635393618),
-                      map: map,
+                    // 지도 초기화
+                    var map = new naver.maps.Map('map', {
+                        center: new naver.maps.LatLng(37.5666102, 126.9783881), // 기본 위치
+                        zoom: 17
                     });
 
-                    var map = new naver.maps.Map('map', mapOptions);
+                    // 주소를 위도와 경도로 변환하는 함수
+                    function displayMapByAddress(address) {
+                        naver.maps.Service.geocode({ query: address }, function(status, response) {
+                            if (status !== naver.maps.Service.Status.OK) {
+                                return alert('Geocode 실패: ' + status);
+                            }
+
+                            var result = response.v2.addresses[0];
+                            var latlng = new naver.maps.LatLng(result.y, result.x);
+
+                            map.setCenter(latlng);
+
+                            var marker = new naver.maps.Marker({
+                                position: latlng,
+                                map: map
+                            });
+                        });
+                    }
+
+                    // 원하는 주소로 지도를 표시
+                    var address = "서울시 영등포구 은행로 30"; // 예시 주소
+                    displayMapByAddress(address);
                     </script>
                     
                     <div class="map_ico">

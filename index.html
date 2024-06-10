@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -21,7 +22,11 @@
 <script src="./js/movie.js"></script>
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=h93vz8hs8o"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-<script type="text/javascript">
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init('1913029e268734bcba002cc477e8398e');
 
@@ -57,30 +62,52 @@
 <link href="./css/default.css" rel="stylesheet">
 <link href="./css/main.css" rel="stylesheet">
 <link href="./css/swiper-bundle.min.css" rel="stylesheet">
-<!--<script>
-$(window).load(function () {
-    $('body').sakura();
-});
-</script>-->
 </head>
 
 <body>
   <header>
-      <div id="invite_top">
+      <div id="invite_top" data-aos="fade-up">
           <div class="top_day">
               <h1>2024.10.26</h1>
               <h2>박성현 & 이원경</h2>
           </div>
           <div class="top_pic">
-              <img src="/img/main.jpg" alt="메인사진">
+                <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/img/main.jpg" alt="메인사진 1"></div>
+                    <div class="swiper-slide"><img src="/img/main.jpg" alt="메인사진 2"></div>
+                    <div class="swiper-slide"><img src="/img/main.jpg" alt="메인사진 3"></div>
+                </div>
+            </div>
           </div>
           <div class="top_hall">
               2024년 10월 26일 토요일 오후 12시 10분<br>여의도 더파티움 파티움홀
           </div>
       </div>
   </header>
-  
-  <section>
+  <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true, // 무한 루프
+            effect: 'fade', // 페이드 효과
+            fadeEffect: {
+                crossFade: true
+            },
+            autoplay: {
+                delay: 4000, // 자동 재생 시간 간격
+                disableOnInteraction: false // 상호작용 후 자동 재생 유지
+            },
+            speed: 2500, // 슬라이드 전환 속도
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+    </script>
+  <section data-aos="fade-up">
       <div id="invite_in">
           <div class="in_text">
               <div class="title">
@@ -216,7 +243,7 @@ $(window).load(function () {
              <div id="count"></div>
           </div>
           
-          <div class="gallery">
+          <div class="gallery" data-aos="fade-up">
              <div class="title">
                   <h3><img src="/img/heart.svg" class="ico_img"></h3>
                   <h4>우리들의 사진</h4>
@@ -346,7 +373,7 @@ $(window).load(function () {
               </script>
           </div>
           
-          <div class="account">
+          <div class="account" data-aos="fade-up">
               <div class="title">
                   <h3><img src="/img/heart.svg" class="ico_img"></h3>
                   <h4>마음 전하실 곳</h4>
@@ -431,7 +458,7 @@ $(window).load(function () {
               </script>
           </div>
           
-          <div class="map">
+          <div class="map" data-aos="fade-up">
               <div class="title">
                   <h3><img src="/img/heart.svg" class="ico_img"></h3>
                   <h4>오시는 길</h4>
@@ -489,7 +516,7 @@ $(window).load(function () {
                 <img class="ico_img" src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" /> 카카오톡공유하기
           </a>
           
-          <div class="copylight">성현♥원경 올림.<strong>Copyright 2023. ParkLee</strong></div>
+          <div class="copylight">성현♥원경 올림.<strong>Copyright 2024. ParkLee</strong></div>
           
       </div>
       <div>
@@ -497,13 +524,6 @@ $(window).load(function () {
             <source src="./audio/wedding.mp3" type="audio/mpeg">
             브라우저가 오디오 요소를 지원하지 않습니다.
         </audio>
-        <!--
-        <div id="controls">
-        <button onclick="playAudio()">재생</button>
-        <button onclick="pauseAudio()">일시 정지</button>
-        <button onclick="stopAudio()">정지</button>
-    </div>
-    -->
     </div>
   </section>
   
@@ -533,10 +553,17 @@ document.addEventListener('click', function(event) {
     playAudio();
 });
 
- // 탭 이벤트
+// 탭 이벤트
 document.addEventListener('touchstart', function(event) {
      playAudio();
 });
 
-
+ // AOS 초기화
+AOS.init({
+    duration: 1200, // 애니메이션 지속 시간
+    offset: 200, // 애니메이션 시작 위치
+    easing: 'ease-in-out', // 애니메이션 종류
+    once: true // 스크롤 한 번만 애니메이션 실행
+});
 </script>
+</html>

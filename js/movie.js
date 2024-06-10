@@ -14,9 +14,8 @@
                 var currTime = new Date().getTime();
                 var timeToCall = Math.max(0, 16 - (currTime - lastTime));
                 var id = window.setTimeout(function () {
-                        callback(currTime + timeToCall);
-                    },
-                    timeToCall);
+                    callback(currTime + timeToCall);
+                }, timeToCall);
                 lastTime = currTime + timeToCall;
 
                 return id;
@@ -26,7 +25,7 @@
             window.cancelAnimationFrame = function (id) {
                 clearTimeout(id);
             };
-    }());
+    })();
 
     // Sakura function.
     $.fn.sakura = function (options) {
@@ -57,7 +56,7 @@
             maxSize: 14,
             minSize: 9,
             newOn: 300,
-            swayAnimations: ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8']
+            swayAnimations: ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8'],
         };
 
         var options = $.extend({}, defaults, options);
@@ -81,13 +80,24 @@
             var swayAnimation = options.swayAnimations[Math.floor(Math.random() * options.swayAnimations.length)];
             var fallTime = (Math.round(documentHeight * 0.007) + Math.random() * 5) * options.fallSpeed;
 
-            var animations = 'fall ' + fallTime + 's linear 0s 1' + ', ' +
-                blowAnimation + ' ' + (((fallTime > 10 ? fallTime : 30) - 20) + getRandomInt(0, 20)) + 's linear 0s infinite' + ', ' +
-                swayAnimation + ' ' + getRandomInt(2, 4) + 's linear 0s infinite';
+            var animations =
+                'fall ' +
+                fallTime +
+                's linear 0s 1' +
+                ', ' +
+                blowAnimation +
+                ' ' +
+                ((fallTime > 10 ? fallTime : 30) - 20 + getRandomInt(0, 20)) +
+                's linear 0s infinite' +
+                ', ' +
+                swayAnimation +
+                ' ' +
+                getRandomInt(2, 4) +
+                's linear 0s infinite';
             var petal = sakura.clone();
             var size = getRandomInt(options.minSize, options.maxSize);
             var startPosLeft = Math.random() * documentWidth - 100;
-            var startPosTop = -((Math.random() * 20) + 15);
+            var startPosTop = -(Math.random() * 20 + 15);
 
             // Apply Event Listener to remove petals that reach the bottom of the page.
             prefixedEvent(petal, 'AnimationEnd', function () {
@@ -111,11 +121,10 @@
                     height: size,
                     left: startPosLeft,
                     'margin-top': startPosTop,
-                    width: size
+                    width: size,
                 })
                 .appendTo('body');
         };
-
 
         // Recalculate documentHeight and documentWidth on browser resize.
         $(window).resize(function () {
@@ -126,4 +135,4 @@
         // Finally: Start adding petals.
         requestAnimationFrame(petalCreator);
     };
-}(jQuery));
+})(jQuery);

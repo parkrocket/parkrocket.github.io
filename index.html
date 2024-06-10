@@ -8,7 +8,7 @@
 <meta name="author" content="">
 <meta name="Keywords" content="박성현♥이원경 결혼합니다.">
 <meta property="og:type" content="website" />
-<link rel="icon" href="./img/ico_picon.svg" sizes="152x152">
+<link rel="icon" href="./img/favicon.ico" sizes="16x16">
 <!-- 웹폰트 적용 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -527,10 +527,8 @@ function stopAudio() {
     audio.pause();
     audio.currentTime = 0;
 }
+//setInterval("playAudio()",200);
 
-$(document).ready(function(){
-    
-})
 document.addEventListener('click', function(event) {
     playAudio();
 });

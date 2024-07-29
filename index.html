@@ -1,571 +1,680 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- SEO 관련 -->
-<meta name="robots" content="index,follow">
-<title>박성현♥이원경 결혼합니다.</title>
-<meta name="author" content="">
-<meta name="Keywords" content="박성현♥이원경 결혼합니다.">
-<meta property="og:type" content="website" />
-<link rel="icon" href="./img/favicon.ico" sizes="16x16">
-<!-- 웹폰트 적용 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
-<script src="./js/swiper-bundle.min.js"></script>
-<script src="./js/common.js"></script>
-<script src="./js/movie.js"></script>
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=h93vz8hs8o"></script>
-<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-<!-- AOS CSS -->
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<link rel="stylesheet" href="./css/sakura.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO 관련 -->
+    <meta name="robots" content="index,follow" />
+    <title>박성현♥이원경 결혼합니다.</title>
+    <meta name="author" content="" />
+    <meta name="Keywords" content="박성현♥이원경 결혼합니다." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="./img/favicon.ico" sizes="16x16" />
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/movie.js"></script>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=h93vz8hs8o"
+    ></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/sakura.css" />
 
-<!-- AOS JavaScript -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
-  Kakao.init('1913029e268734bcba002cc477e8398e');
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+      Kakao.init("1913029e268734bcba002cc477e8398e");
 
-  // SDK 초기화 여부를 판단합니다.
-  console.log(Kakao.isInitialized());
+      // SDK 초기화 여부를 판단합니다.
+      console.log(Kakao.isInitialized());
 
-  function kakaoShare() {
-    Kakao.Link.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: '박성현♥이원경 결혼합니다.',
-        description: '2024년 10월 26일 토요일 오후 12시 10분 여의도 더파티움 파티움홀',
-        imageUrl: 'https://parkrocket.github.io/img/main.jpg',
-        link: {
-          mobileWebUrl: 'https://parkrocket.github.io/',
-          webUrl: 'https://parkrocket.github.io/',
-        },
-      },
-      buttons: [
-        {
-          title: '모바일청첩장 보기',
-          link: {
-            mobileWebUrl: 'https://parkrocket.github.io/',
-            webUrl: 'https://parkrocket.github.io/',
+      function kakaoShare() {
+        Kakao.Link.sendDefault({
+          objectType: "feed",
+          content: {
+            title: "박성현♥이원경 결혼합니다.",
+            description:
+              "2024년 10월 26일 토요일 오후 12시 10분 여의도 더파티움 파티움홀",
+            imageUrl: "https://parkrocket.github.io/img/main.jpg",
+            link: {
+              mobileWebUrl: "https://parkrocket.github.io/",
+              webUrl: "https://parkrocket.github.io/",
+            },
           },
-        },
-      ],
-      // 카카오톡 미설치 시 카카오톡 설치 경로이동
-      installTalk: true,
-    })
-  }
-</script>
-<link href="./css/default.css" rel="stylesheet">
-<link href="./css/main.css" rel="stylesheet">
-<link href="./css/swiper-bundle.min.css" rel="stylesheet">
-</head>
+          buttons: [
+            {
+              title: "모바일청첩장 보기",
+              link: {
+                mobileWebUrl: "https://parkrocket.github.io/",
+                webUrl: "https://parkrocket.github.io/",
+              },
+            },
+          ],
+          // 카카오톡 미설치 시 카카오톡 설치 경로이동
+          installTalk: true,
+        });
+      }
+    </script>
+    <link href="./css/default.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/swiper-bundle.min.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <script src="./js/sakura.js" text="text/javascript"></script>
- <script>
-      var sakura = new Sakura('body', {
+    <script>
+      var sakura = new Sakura("body", {
         colors: [
           {
-            gradientColorStart: 'rgba(255, 183, 197, 0.9)',
-            gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+            gradientColorStart: "rgba(255, 183, 197, 0.9)",
+            gradientColorEnd: "rgba(255, 197, 208, 0.9)",
             gradientColorDegree: 120,
           },
           {
-            gradientColorStart: 'rgba(255,189,189)',
-            gradientColorEnd: 'rgba(227,170,181)',
+            gradientColorStart: "rgba(255,189,189)",
+            gradientColorEnd: "rgba(227,170,181)",
             gradientColorDegree: 120,
           },
           {
-            gradientColorStart: 'rgba(212,152,163)',
-            gradientColorEnd: 'rgba(242,185,196)',
+            gradientColorStart: "rgba(212,152,163)",
+            gradientColorEnd: "rgba(242,185,196)",
             gradientColorDegree: 120,
           },
         ],
         delay: 200,
       });
     </script>
-  <header>
+    <header>
       <div id="invite_top" data-aos="fade-up">
-          <div class="top_day">
-              <h1>2024.10.26</h1>
-              <h2>박성현 & 이원경</h2>
-          </div>
-          <div class="top_pic">
-                <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/img/main.jpg" alt="메인사진 1"></div>
-                </div>
+        <div class="top_day">
+          <h1>2024.10.26</h1>
+          <h2>박성현 & 이원경</h2>
+        </div>
+        <div class="top_pic">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/img/10.jpg" alt="메인사진 1" />
+              </div>
             </div>
           </div>
-          <div class="top_hall">
-              2024년 10월 26일 토요일 오후 12시 10분<br>여의도 더파티움 파티움홀
-          </div>
+        </div>
+        <div class="top_hall">
+          2024년 10월 26일 토요일 오후 12시 10분<br />여의도 더파티움 파티움홀
+        </div>
       </div>
-  </header>
-  
-  <section data-aos="fade-up">
+    </header>
+
+    <section data-aos="fade-up">
       <div id="invite_in">
-          <div class="in_text">
-              <div class="title">
-                  <h3><img src="/img/heart.svg" class="ico_img"></h3>
-                  <h4>초대합니다</h4>
-              </div>
-              <div class="content">
-                  저희 두 사람이 새로운 인생을<br>시작하는 첫날을<br>함께 해주셔서 감사합니다.<br>예쁘게 열심히 살아가는 모습으로<br>여러분의 축하에 보답하겠습니다.
-              </div>
-              <div class="span_line"></div>
-              <div class="name">
-                 <p>박춘상 · 송혜경<span>의 아들</span>성현</p>
-                  <p>이광선 · 박순애<span>의 딸</span>원경</p>
-              </div>
-              <div class="phone">연락하기</div>
-              <div class="call_popup">
-                  <div class="call_box">
-                     <div class="close"></div>
-                      <ul>
-                          <li>
-                              <div class="calltext">신랑</div>
-                              <div class="callname">박성현</div>
-                              <div class="callname icon">
-                                  <a href="tel:01041103105"><img src="/img/call_blue.svg" class="ico_img3"></a>
-                                  <a href="sms:01041103105"><img src="/img/sms_blue.svg" class="ico_img3"></a>
-                              </div>
-                          </li>
-                          <li>
-                              <div class="calltext">신랑 아버지</div>
-                              <div class="callname">박춘상</div>
-                              <div class="callname icon">
-                                  <a href="tel:01036043105"><img src="/img/call_blue.svg" class="ico_img3"></a>
-                                  <a href="sms:01036043105"><img src="/img/sms_blue.svg" class="ico_img3"></a>
-                              </div>
-                          </li>
-                          <li>
-                              <div class="calltext">신랑 어머니</div>
-                              <div class="callname">송혜경</div>
-                              <div class="callname icon">
-                                  <a href="tel:01089393105"><img src="/img/call_blue.svg" class="ico_img3"></a>
-                                  <a href="sms:01089393105"><img src="/img/sms_blue.svg" class="ico_img3"></a>
-                              </div>
-                          </li>
-                      </ul>
-                      <ul>
-                          <li>
-                              <div class="calltext">신부</div>
-                              <div class="callname">이원경</div>
-                              <div class="callname icon">
-                                  <a href="tel:01091093316"><img src="/img/call_pink.svg" class="ico_img3"></a>
-                                  <a href="sms:01091093316"><img src="/img/sms_pink.svg" class="ico_img3"></a>
-                              </div>
-                          </li>
-                          <li>
-                              <div class="calltext">신부 아버지</div>
-                              <div class="callname">이광선</div>
-                              <div class="callname icon">
-                                  <a href="tel:01089903869"><img src="/img/call_pink.svg" class="ico_img3"></a>
-                                  <a href="sms:01089903869"><img src="/img/sms_pink.svg" class="ico_img3"></a>
-                              </div>
-                          </li>
-                          <li>
-                              <div class="calltext">신부 어머니</div>
-                              <div class="callname">박순애</div>
-                              <div class="callname icon">
-                                  <a href="tel:01080810087"><img src="/img/call_pink.svg" class="ico_img3"></a>
-                                  <a href="sms:01080810087"><img src="/img/sms_pink.svg" class="ico_img3"></a>
-                              </div>
-                          </li>
-                      </ul>
+        <div class="in_text">
+          <div class="title">
+            <h3><img src="/img/heart.svg" class="ico_img" /></h3>
+            <h4>초대합니다</h4>
+          </div>
+          <div class="content">
+            저희 두 사람이 새로운 인생을<br />시작하는 첫날을<br />함께 해주셔서
+            감사합니다.<br />예쁘게 열심히 살아가는 모습으로<br />여러분의
+            축하에 보답하겠습니다.
+          </div>
+          <div class="span_line"></div>
+          <div class="name">
+            <p>박춘상 · 송혜경<span>의 아들</span>성현</p>
+            <p>이광선 · 박순애<span>의 딸</span>원경</p>
+          </div>
+          <div class="phone">연락하기</div>
+          <div class="call_popup">
+            <div class="call_box">
+              <div class="close"></div>
+              <ul>
+                <li>
+                  <div class="calltext">신랑</div>
+                  <div class="callname">박성현</div>
+                  <div class="callname icon">
+                    <a href="tel:01041103105"
+                      ><img src="/img/call_blue.svg" class="ico_img3"
+                    /></a>
+                    <a href="sms:01041103105"
+                      ><img src="/img/sms_blue.svg" class="ico_img3"
+                    /></a>
                   </div>
-              </div>
-              <script>
+                </li>
+                <li>
+                  <div class="calltext">신랑 아버지</div>
+                  <div class="callname">박춘상</div>
+                  <div class="callname icon">
+                    <a href="tel:01036043105"
+                      ><img src="/img/call_blue.svg" class="ico_img3"
+                    /></a>
+                    <a href="sms:01036043105"
+                      ><img src="/img/sms_blue.svg" class="ico_img3"
+                    /></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="calltext">신랑 어머니</div>
+                  <div class="callname">송혜경</div>
+                  <div class="callname icon">
+                    <a href="tel:01089393105"
+                      ><img src="/img/call_blue.svg" class="ico_img3"
+                    /></a>
+                    <a href="sms:01089393105"
+                      ><img src="/img/sms_blue.svg" class="ico_img3"
+                    /></a>
+                  </div>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <div class="calltext">신부</div>
+                  <div class="callname">이원경</div>
+                  <div class="callname icon">
+                    <a href="tel:01091093316"
+                      ><img src="/img/call_pink.svg" class="ico_img3"
+                    /></a>
+                    <a href="sms:01091093316"
+                      ><img src="/img/sms_pink.svg" class="ico_img3"
+                    /></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="calltext">신부 아버지</div>
+                  <div class="callname">이광선</div>
+                  <div class="callname icon">
+                    <a href="tel:01089903869"
+                      ><img src="/img/call_pink.svg" class="ico_img3"
+                    /></a>
+                    <a href="sms:01089903869"
+                      ><img src="/img/sms_pink.svg" class="ico_img3"
+                    /></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="calltext">신부 어머니</div>
+                  <div class="callname">박순애</div>
+                  <div class="callname icon">
+                    <a href="tel:01080810087"
+                      ><img src="/img/call_pink.svg" class="ico_img3"
+                    /></a>
+                    <a href="sms:01080810087"
+                      ><img src="/img/sms_pink.svg" class="ico_img3"
+                    /></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <script>
+            $(".call_popup").hide();
+            $(".phone").on("click", function () {
+              $(".call_popup").css("display", "flex");
+              $("body").css("overflow", "hidden");
+              $(".close").click(function () {
                 $(".call_popup").hide();
-                $('.phone').on('click', function(){
-                    $(".call_popup").css("display","flex");
-                    $("body").css("overflow","hidden");
-                    $(".close").click(function(){
-                        $(".call_popup").hide();
-                        $("body").css("overflow","auto");
-                    });
-                });
-              </script>
+                $("body").css("overflow", "auto");
+              });
+            });
+          </script>
+        </div>
+        <div class="days">
+          <div class="days_tit">2024년 10월 26일</div>
+          <div class="days_cal">
+            <div class="days_week">
+              <div>일</div>
+              <div>월</div>
+              <div>화</div>
+              <div>수</div>
+              <div>목</div>
+              <div>금</div>
+              <div>토</div>
+            </div>
+            <div class="days_num">
+              <div></div>
+              <div></div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+              <div>13</div>
+              <div>14</div>
+              <div>15</div>
+              <div>16</div>
+              <div>17</div>
+              <div>18</div>
+              <div>19</div>
+              <div>20</div>
+              <div>21</div>
+              <div>22</div>
+              <div>23</div>
+              <div>24</div>
+              <div>25</div>
+              <div class="on">26</div>
+              <div>27</div>
+              <div>28</div>
+              <div>29</div>
+              <div>30</div>
+              <div>31</div>
+            </div>
           </div>
-          <div class="days">
-             <div class="days_tit">2024년 10월 26일</div>
-             <div class="days_cal">
-                 <div class="days_week">
-                     <div>일</div>
-                     <div>월</div>
-                     <div>화</div>
-                     <div>수</div>
-                     <div>목</div>
-                     <div>금</div>
-                     <div>토</div>
-                 </div>
-                 <div class="days_num">
-                     <div></div>
-                     <div></div>
-                     <div>1</div>
-                     <div>2</div>
-                     <div>3</div>
-                     <div>4</div>
-                     <div>5</div>
-                     <div>6</div>
-                     <div>7</div>
-                     <div>8</div>
-                     <div>9</div>
-                     <div>10</div>
-                     <div>11</div>
-                     <div>12</div>
-                     <div>13</div>
-                     <div>14</div>
-                     <div>15</div>
-                     <div>16</div>
-                     <div>17</div>
-                     <div>18</div>
-                     <div>19</div>
-                     <div>20</div>
-                     <div>21</div>
-                     <div>22</div>
-                     <div>23</div>
-                     <div>24</div>
-                     <div>25</div>
-                     <div class="on">26</div>
-                     <div>27</div>
-                     <div>28</div>
-                     <div>29</div>
-                     <div>30</div>
-                     <div>31</div>
-                 </div>
-             </div>
-             <div id="count"></div>
+          <div id="count"></div>
+        </div>
+
+        <div class="gallery" data-aos="fade-up">
+          <div class="title">
+            <h3><img src="/img/heart.svg" class="ico_img" /></h3>
+            <h4>우리들의 사진</h4>
           </div>
-          
-          <div class="gallery" data-aos="fade-up">
-             <div class="title">
-                  <h3><img src="/img/heart.svg" class="ico_img"></h3>
-                  <h4>우리들의 사진</h4>
+          <div class="pic_box">
+            <div class="pic_ori">
+              <div class="pic_img" data-index="1">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
               </div>
-             <div class="pic_box">
-                 <div class="pic_ori">
-                     <div class="pic_img" data-index="1">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="2">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="3">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="4">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="5">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="6">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="7">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="8">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="9">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                 </div>
-                 <div class="more_btn">더보기</div>
-                 <div class="pic_more">
-                     <div class="pic_img" data-index="10">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="11">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                     <div class="pic_img" data-index="12">
-                        <div class="centered">
-                            <img src="/img/pic.jpg">
-                         </div>
-                     </div>
-                 </div>
-                 <script>
-                    $(function(){
-                        $(".pic_more").hide();
-                        $(".more_btn").click(function(){
-                            $(".pic_more").fadeIn(1000);
-                            $(".more_btn").hide();
-                        });
-                    });
-                 </script>
-             </div>
-             <div class="pic_swiper">
-                 <div class="close"></div>
-                  <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <div data-hash="slide1" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                      <div data-hash="slide2" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                      <div data-hash="slide3" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                      <div data-hash="slide4" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                      <div data-hash="slide5" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                      <div data-hash="slide6" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                      <div data-hash="slide7" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                      <div data-hash="slide8" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                      <div data-hash="slide9" class="swiper-slide"><img src="/img/pic.jpg"></div>
-                    </div>
-                  </div>
-                  <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+              <div class="pic_img" data-index="2">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
               </div>
-              <script>
-                var swiper = new Swiper(".mySwiper", {
-                  spaceBetween: 0,
-                  hashNavigation: {
-                    watchState: true,
-                  },
-                  pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                  },
-                  navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                  },
+              <div class="pic_img" data-index="3">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+              <div class="pic_img" data-index="4">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+              <div class="pic_img" data-index="5">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+              <div class="pic_img" data-index="6">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+              <div class="pic_img" data-index="7">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+              <div class="pic_img" data-index="8">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+              <div class="pic_img" data-index="9">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="more_btn">더보기</div>
+            <div class="pic_more">
+              <div class="pic_img" data-index="10">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+              <div class="pic_img" data-index="11">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+              <div class="pic_img" data-index="12">
+                <div class="centered">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+            </div>
+            <script>
+              $(function () {
+                $(".pic_more").hide();
+                $(".more_btn").click(function () {
+                  $(".pic_more").fadeIn(1000);
+                  $(".more_btn").hide();
                 });
-                  
+              });
+            </script>
+          </div>
+          <div class="pic_swiper">
+            <div class="close"></div>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div data-hash="slide1" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+                <div data-hash="slide2" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+                <div data-hash="slide3" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+                <div data-hash="slide4" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+                <div data-hash="slide5" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+                <div data-hash="slide6" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+                <div data-hash="slide7" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+                <div data-hash="slide8" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+                <div data-hash="slide9" class="swiper-slide">
+                  <img src="/img/pic.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              spaceBetween: 0,
+              hashNavigation: {
+                watchState: true,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+
+            $(".pic_swiper").hide();
+            $(".pic_img").on("click", function () {
+              $(".pic_swiper").css("display", "flex");
+              $("body").css("overflow", "hidden");
+              let dataIdx = $(this).data("index");
+              swiper.slideTo(dataIdx);
+              $(".close").click(function () {
                 $(".pic_swiper").hide();
-                $('.pic_img').on('click', function(){
-                    $(".pic_swiper").css("display","flex");
-                    $("body").css("overflow","hidden");
-                    let dataIdx = $(this).data('index')
-                    swiper.slideTo(dataIdx)
-                    $(".close").click(function(){
-                        $(".pic_swiper").hide();
-                        $("body").css("overflow","auto");
-                    });
-                });
-              </script>
+                $("body").css("overflow", "auto");
+              });
+            });
+          </script>
+        </div>
+
+        <div class="account" data-aos="fade-up">
+          <div class="title">
+            <h3><img src="/img/heart.svg" class="ico_img" /></h3>
+            <h4>마음 전하실 곳</h4>
           </div>
-          
-          <div class="account" data-aos="fade-up">
-              <div class="title">
-                  <h3><img src="/img/heart.svg" class="ico_img"></h3>
-                  <h4>마음 전하실 곳</h4>
-              </div>
-              <div class="account_pop">
-                  <div class="account_btn man">신랑측 계좌번호</div>
-                  <div class="account_box">
-                      <ul>
-                          <li>
-                              <div class="calltext">박성현</div>
-                              <div class="callname">국민</div>
-                              <div class="callacc">
-                                  <input id="accCopy1" value="71590200000405">
-                                  <button class="blue_line" onclick="copy_to_clipboard1()">복사하기</button>
-                              </div>
-                          </li>
-                      </ul>
+          <div class="account_pop">
+            <div class="account_btn man">신랑측 계좌번호</div>
+            <div class="account_box">
+              <ul>
+                <li>
+                  <div class="calltext">박성현</div>
+                  <div class="callname">국민</div>
+                  <div class="callacc">
+                    <input id="accCopy1" value="71590200000405" />
+                    <button class="blue_line" onclick="copy_to_clipboard1()">
+                      복사하기
+                    </button>
                   </div>
-                  <div class="account_btn woman">신부측 계좌번호</div>
-                  <div class="account_box">
-                      <ul>
-                          <li>
-                              <div class="calltext">이원경</div>
-                              <div class="callname">국민</div>
-                              <div class="callacc">
-                                  <input id="accCopy3" value="91091093316">
-                                  <button class="pink_line" onclick="copy_to_clipboard3()">복사하기</button>
-                              </div>
-                          </li>
-                      </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="account_btn woman">신부측 계좌번호</div>
+            <div class="account_box">
+              <ul>
+                <li>
+                  <div class="calltext">이원경</div>
+                  <div class="callname">국민</div>
+                  <div class="callacc">
+                    <input id="accCopy3" value="91091093316" />
+                    <button class="pink_line" onclick="copy_to_clipboard3()">
+                      복사하기
+                    </button>
                   </div>
-              </div>
-              <script>
-                function copy_to_clipboard1() {    
-                  var copyText = document.getElementById('accCopy1');
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("Copy");
-                  alert('복사되었습니다 감사합니다.행복한 하루가 되세요♥');
-                }
-                  function copy_to_clipboard2() {    
-                  var copyText = document.getElementById('accCopy2');
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("Copy");
-                  alert('복사되었습니다 감사합니다.행복한 하루가 되세요♥');
-                }
-                  function copy_to_clipboard3() {    
-                  var copyText = document.getElementById('accCopy3');
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("Copy");
-                  alert('복사되었습니다 감사합니다.행복한 하루가 되세요♥');
-                }
-                  function copy_to_clipboard4() {    
-                  var copyText = document.getElementById('accCopy4');
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("Copy");
-                  alert('복사되었습니다 감사합니다.행복한 하루가 되세요♥');
-                }
-                </script>
-              <script>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <script>
+            function copy_to_clipboard1() {
+              var copyText = document.getElementById("accCopy1");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999);
+              document.execCommand("Copy");
+              alert("복사되었습니다 감사합니다.행복한 하루가 되세요♥");
+            }
+            function copy_to_clipboard2() {
+              var copyText = document.getElementById("accCopy2");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999);
+              document.execCommand("Copy");
+              alert("복사되었습니다 감사합니다.행복한 하루가 되세요♥");
+            }
+            function copy_to_clipboard3() {
+              var copyText = document.getElementById("accCopy3");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999);
+              document.execCommand("Copy");
+              alert("복사되었습니다 감사합니다.행복한 하루가 되세요♥");
+            }
+            function copy_to_clipboard4() {
+              var copyText = document.getElementById("accCopy4");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999);
+              document.execCommand("Copy");
+              alert("복사되었습니다 감사합니다.행복한 하루가 되세요♥");
+            }
+          </script>
+          <script>
+            $(".account_popup").hide();
+            $(".account_popup2").hide();
+            $(".man").on("click", function () {
+              $(".account_popup").css("display", "flex");
+              $("body").css("overflow", "hidden");
+              $(".close").click(function () {
                 $(".account_popup").hide();
+                $("body").css("overflow", "auto");
+              });
+            });
+            $(".woman").on("click", function () {
+              $(".account_popup2").css("display", "flex");
+              $("body").css("overflow", "hidden");
+              $(".close").click(function () {
                 $(".account_popup2").hide();
-                $('.man').on('click', function(){
-                    $(".account_popup").css("display","flex");
-                    $("body").css("overflow","hidden");
-                    $(".close").click(function(){
-                        $(".account_popup").hide();
-                        $("body").css("overflow","auto");
-                    });
-                });
-                $('.woman').on('click', function(){
-                    $(".account_popup2").css("display","flex");
-                    $("body").css("overflow","hidden");
-                    $(".close").click(function(){
-                        $(".account_popup2").hide();
-                        $("body").css("overflow","auto");
-                    });
-                });
-              </script>
-          </div>
-          
-          <div class="map" data-aos="fade-up">
-              <div class="title">
-                  <h3><img src="/img/heart.svg" class="ico_img"></h3>
-                  <h4>오시는 길</h4>
-              </div>
-              <div class="map_box">
-                  <div id="map" style="width:90%;height: 300px; margin:0 auto;"></div>
-                  <script>
-                    var map = new naver.maps.Map("map", {
-                      center: new naver.maps.LatLng(37.5281995830714, 126.922656059858),
-                      zoom: 17,
-                    });
-                    var marker = new naver.maps.Marker({
-                      position: new naver.maps.LatLng(37.5281995830714, 126.922656059858),
-                      map: map,
-                    });
+                $("body").css("overflow", "auto");
+              });
+            });
+          </script>
+        </div>
 
-                    var map = new naver.maps.Map('map', mapOptions);
-                    </script>
-                    
-                    <div class="map_ico">
-                        <a href="https://naver.me/xbwnw0vC"><img src="/img/map1.png" class="ico_img4">네이버맵</a>    
-                        <a href="https://kko.to/BQu1t7MpOn"><img src="/img/map2.png" class="ico_img4">카카오맵</a>    
-                        <a href="https://surl.tmap.co.kr/6a6474d3"><img src="/img/map3.png" class="ico_img4">티맵</a>    
-                    </div>
-                    
-                    <div class="map_guide">
-                        <ul>
-                            <li>
-                                <div class="guide_tit">여의도 더파티움 파티움홀</div>
-                                <div class="guide_span">서울시 영등포구 은행로 30(여의도동,중소기업중앙회) <br><br> 서울시 영등포구 여의도동 16-2 중소기업중앙회</div>
-                            </li>
-                            <li>
-                                <div class="guide_tit">지하철 이용 시</div>
-                                <div class="guide_span">지하철 9호선 국회의사당역 3번 출구 (도보5분) <br><br> 5호선 여의나루역 1번 출구 후 버스이용(약 11분 소요) [ 여의나루역 2번 출구 버스 정류장 마을버스 10번 승차 기계회관 정류장 하차]</div>
-                            </li>
-                            <li>
-                                <div class="guide_tit">버스 이용 시</div>
-                                <div class="guide_span">기계회관 [버스 정류장 No.19-320] - 일반[10], 마을[영등포10] <br><br> 산업은행본점 [버스 정류장 No.19-281] - 일반[10], 간선[463], 마을[영등포10] <br><br> 여의도순복음교회 [버스 정류장 No.19-303] - 일반[10], 간선[463], 지선[5633], 마을[영등포10] <br><br> 여의도 환승센터 [버스 정류장 No.19-016] - 일반[88], 간선[8600, 8601] <br><br> 여의도 환승센터 [버스 정류장 No.19-008] - 간선[N16, 160, 260, 360, 600, 662], 지선[5012, 6623, 6628] </div>
-                            </li>
-                            <li>
-                                <div class="guide_tit">자가용 이용 시</div>
-                                <div class="guide_span">
-                                    강남방면 - 88올림픽대로를 타고 여의도 63빌딩쪽으로 나오셔서 여의도 공원 방면으로 직진 후 중소기업중앙회관 지하 주차장으로 들어 오시면 됩니다. <br><br>
-                                    강북방면 - 서강대교를 건너서 바로 순복음교회 쪽으로 좌회전 하신 후 두 번째 삼거리에서 우회전, 중소기업 중앙회 지하 주차장으로 들어오시면 됩니다. <br><br>
-                                    마포대교 - 마포대교를 건너자마자 우회전 하시고 바로 좌회전 하신 후 중소기업중앙회관 지하 주차장으로 들어오시면 됩니다. <br><br>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-              </div>
+        <div class="map" data-aos="fade-up">
+          <div class="title">
+            <h3><img src="/img/heart.svg" class="ico_img" /></h3>
+            <h4>오시는 길</h4>
           </div>
-          
-          <a id="kakao-link-btn" href="javascript:kakaoShare()">
-                <img class="ico_img" src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" /> 카카오톡공유하기
-          </a>
-          
-          <div class="copylight">성현♥원경 올림.<strong>Copyright 2024. ParkLee</strong></div>
-          
+          <div class="map_box">
+            <div
+              id="map"
+              style="width: 90%; height: 300px; margin: 0 auto"
+            ></div>
+            <script>
+              var map = new naver.maps.Map("map", {
+                center: new naver.maps.LatLng(
+                  37.5281995830714,
+                  126.922656059858
+                ),
+                zoom: 17,
+              });
+              var marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(
+                  37.5281995830714,
+                  126.922656059858
+                ),
+                map: map,
+              });
+
+              var map = new naver.maps.Map("map", mapOptions);
+            </script>
+
+            <div class="map_ico">
+              <a href="https://naver.me/xbwnw0vC"
+                ><img src="/img/map1.png" class="ico_img4" />네이버맵</a
+              >
+              <a href="https://kko.to/BQu1t7MpOn"
+                ><img src="/img/map2.png" class="ico_img4" />카카오맵</a
+              >
+              <a href="https://surl.tmap.co.kr/6a6474d3"
+                ><img src="/img/map3.png" class="ico_img4" />티맵</a
+              >
+            </div>
+
+            <div class="map_guide">
+              <ul>
+                <li>
+                  <div class="guide_tit">여의도 더파티움 파티움홀</div>
+                  <div class="guide_span">
+                    서울시 영등포구 은행로 30(여의도동,중소기업중앙회)
+                    <br /><br />
+                    서울시 영등포구 여의도동 16-2 중소기업중앙회
+                  </div>
+                </li>
+                <li>
+                  <div class="guide_tit">지하철 이용 시</div>
+                  <div class="guide_span">
+                    지하철 9호선 국회의사당역 3번 출구 (도보5분) <br /><br />
+                    5호선 여의나루역 1번 출구 후 버스이용(약 11분 소요) [
+                    여의나루역 2번 출구 버스 정류장 마을버스 10번 승차 기계회관
+                    정류장 하차]
+                  </div>
+                </li>
+                <li>
+                  <div class="guide_tit">버스 이용 시</div>
+                  <div class="guide_span">
+                    기계회관 [버스 정류장 No.19-320] - 일반[10], 마을[영등포10]
+                    <br /><br />
+                    산업은행본점 [버스 정류장 No.19-281] - 일반[10], 간선[463],
+                    마을[영등포10] <br /><br />
+                    여의도순복음교회 [버스 정류장 No.19-303] - 일반[10],
+                    간선[463], 지선[5633], 마을[영등포10] <br /><br />
+                    여의도 환승센터 [버스 정류장 No.19-016] - 일반[88],
+                    간선[8600, 8601] <br /><br />
+                    여의도 환승센터 [버스 정류장 No.19-008] - 간선[N16, 160,
+                    260, 360, 600, 662], 지선[5012, 6623, 6628]
+                  </div>
+                </li>
+                <li>
+                  <div class="guide_tit">자가용 이용 시</div>
+                  <div class="guide_span">
+                    강남방면 - 88올림픽대로를 타고 여의도 63빌딩쪽으로 나오셔서
+                    여의도 공원 방면으로 직진 후 중소기업중앙회관 지하
+                    주차장으로 들어 오시면 됩니다. <br /><br />
+                    강북방면 - 서강대교를 건너서 바로 순복음교회 쪽으로 좌회전
+                    하신 후 두 번째 삼거리에서 우회전, 중소기업 중앙회 지하
+                    주차장으로 들어오시면 됩니다. <br /><br />
+                    마포대교 - 마포대교를 건너자마자 우회전 하시고 바로 좌회전
+                    하신 후 중소기업중앙회관 지하 주차장으로 들어오시면 됩니다.
+                    <br /><br />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a id="kakao-link-btn" href="javascript:kakaoShare()">
+          <img
+            class="ico_img"
+            src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+          />
+          카카오톡공유하기
+        </a>
+
+        <div class="copylight">
+          성현♥원경 올림.<strong>Copyright 2024. ParkLee</strong>
+        </div>
       </div>
       <div>
         <audio id="audioPlayer">
-            <source src="./audio/wedding.mp3" type="audio/mpeg">
-            브라우저가 오디오 요소를 지원하지 않습니다.
+          <source src="./audio/wedding.mp3" type="audio/mpeg" />
+          브라우저가 오디오 요소를 지원하지 않습니다.
         </audio>
-    </div>
-  </section>
-  
-  <footer>
-      
-  </footer>
-   
-</body>
-<script>
-var audio = document.getElementById('audioPlayer');
+      </div>
+    </section>
 
-function playAudio() {
-    audio.play();
-}
+    <footer></footer>
+  </body>
+  <script>
+    var audio = document.getElementById("audioPlayer");
 
-function pauseAudio() {
-    audio.pause();
-}
+    function playAudio() {
+      audio.play();
+    }
 
-function stopAudio() {
-    audio.pause();
-    audio.currentTime = 0;
-}
-//setInterval("playAudio()",200);
+    function pauseAudio() {
+      audio.pause();
+    }
 
-document.addEventListener('click', function(event) {
-    playAudio();
-});
+    function stopAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    //setInterval("playAudio()",200);
 
-// 탭 이벤트
-document.addEventListener('touchstart', function(event) {
-     playAudio();
-});
+    document.addEventListener("click", function (event) {
+      playAudio();
+    });
 
- // AOS 초기화
-AOS.init({
-    duration: 1200, // 애니메이션 지속 시간
-    offset: 200, // 애니메이션 시작 위치
-    easing: 'ease-in-out', // 애니메이션 종류
-    once: true // 스크롤 한 번만 애니메이션 실행
-});
-</script>
+    // 탭 이벤트
+    document.addEventListener("touchstart", function (event) {
+      playAudio();
+    });
+
+    // AOS 초기화
+    AOS.init({
+      duration: 1200, // 애니메이션 지속 시간
+      offset: 200, // 애니메이션 시작 위치
+      easing: "ease-in-out", // 애니메이션 종류
+      once: true, // 스크롤 한 번만 애니메이션 실행
+    });
+  </script>
 </html>

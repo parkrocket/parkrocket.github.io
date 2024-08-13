@@ -122,16 +122,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="top_hall">
-                    2024년 10월 26일 토요일 오후 12시 10분<br />여의도 더파티움
+                <div>
+                    <div class="top_hall" style="padding-bottom:0px;">
+                        <div class="title">
+                            <h4 style="margin-bottom: 30px;"> <span style="background:#e8dfdf; padding: 10px 30px; border-radius: 5px; ">피로연</span></h4>
+                        </div>
+                        2024년 10월 05일 <br />토요일 오전 11시 - 오후 2시<br />몽탄역 광장
+                    </div>
+                </div>
+                <div class="top_hall" style=" margin: 40px; border-radius: 15px;">
+                    <div class="title">
+                        <h4 style="margin-bottom: 30px;"> <span style="background:#e8dfdf; padding: 10px 30px; border-radius: 5px; ">결혼식</span></h4>
+                    </div>
+                    2024년 10월 26일 토요일 오후 12시 10분<br />서울 여의도 더파티움
                     파티움홀
                 </div>
+                
             </div>
         </header>
 
         <section data-aos="fade-up">
             <div id="invite_in">
-                <div class="in_text">
+                <div class="in_text" style="margin-bottom:60px;">
                     <div class="title">
                         <h3><img src="/img/heart.svg" class="ico_img" /></h3>
                         <h4>초대합니다</h4>
@@ -264,6 +276,7 @@
                         });
                     </script>
                 </div>
+                <!--
                 <div class="days">
                     <div class="days_tit">2024년 10월 26일</div>
                     <div class="days_cal">
@@ -314,165 +327,26 @@
                     </div>
                     <div id="count"></div>
                 </div>
-
-                <div class="gallery" data-aos="fade-up">
-                    <div class="title">
-                        <h3><img src="/img/heart.svg" class="ico_img" /></h3>
-                        <h4>우리들의 사진</h4>
-                    </div>
-                    <div class="pic_box"></div>
-                    <script>
-                        $(document).ready(function () {
-                            $.ajax({
-                                url: 'ajax/ajax.picture.html',
-                                type: 'GET',
-                                success: function (data) {
-                                    $('.pic_box').html(data);
-                                },
-                                error: function () {
-                                    alert('사진을 불러오는 데 실패했습니다.');
-                                },
-                            });
-                        });
-                    </script>
-                    <div class="pic_swiper">
-                        <div class="close"></div>
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div data-hash="slide1" class="swiper-slide">
-                                    <img src="/img/1.jpg" />
-                                </div>
-                                <div data-hash="slide2" class="swiper-slide">
-                                    <img src="/img/2.jpg" />
-                                </div>
-                                <div data-hash="slide3" class="swiper-slide">
-                                    <img src="/img/3.jpg" />
-                                </div>
-                                <div data-hash="slide4" class="swiper-slide">
-                                    <img src="/img/4.jpg" />
-                                </div>
-                                <div data-hash="slide5" class="swiper-slide">
-                                    <img src="/img/5.jpg" />
-                                </div>
-                                <div data-hash="slide6" class="swiper-slide">
-                                    <img src="/img/6.jpg" />
-                                </div>
-                                <div data-hash="slide7" class="swiper-slide">
-                                    <img src="/img/7.jpg" />
-                                </div>
-                                <div data-hash="slide8" class="swiper-slide">
-                                    <img src="/img/8.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/9.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/10.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/11.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/12.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/13.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/14.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/15.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/16.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/17.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/18.jpg" />
-                                </div>
-                                <div data-hash="slide9" class="swiper-slide">
-                                    <img src="/img/19.jpg" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <script>
-                        var swiper = new Swiper('.mySwiper', {
-                            spaceBetween: 0,
-                            hashNavigation: {
-                                watchState: true,
-                            },
-                            pagination: {
-                                el: '.swiper-pagination',
-                                clickable: true,
-                            },
-                            navigation: {
-                                nextEl: '.swiper-button-next',
-                                prevEl: '.swiper-button-prev',
-                            },
-                        });
-
-                        $('.pic_swiper').hide();
-                        $(document).on('click', '.pic_img', function () {
-                            $('.pic_swiper').css('display', 'flex');
-                            $('body').css('overflow', 'hidden');
-                            let dataIdx = $(this).data('index');
-                            swiper.slideTo(dataIdx);
-                            $('.close').click(function () {
-                                $('.pic_swiper').hide();
-                                $('body').css('overflow', 'auto');
-                            });
-                        });
-                    </script>
-                </div>
-
+                -->
                 <div class="account" data-aos="fade-up">
                     <div class="title">
                         <h3><img src="/img/heart.svg" class="ico_img" /></h3>
                         <h4>마음 전하실 곳</h4>
                     </div>
                     <div class="account_pop">
-                        <div class="account_btn man">신랑측 계좌번호</div>
                         <div class="account_box">
                             <ul>
                                 <li>
-                                    <div class="calltext">박성현</div>
-                                    <div class="callname">국민</div>
+                                    <div class="calltext">박춘상</div>
+                                    <div class="callname">농협</div>
                                     <div class="callacc">
                                         <input
                                             id="accCopy1"
-                                            value="71590200000405"
+                                            value="63505552054481"
                                         />
                                         <button
                                             class="blue_line"
                                             onclick="copy_to_clipboard1()"
-                                        >
-                                            복사하기
-                                        </button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="account_btn woman">신부측 계좌번호</div>
-                        <div class="account_box">
-                            <ul>
-                                <li>
-                                    <div class="calltext">이원경</div>
-                                    <div class="callname">국민</div>
-                                    <div class="callacc">
-                                        <input
-                                            id="accCopy3"
-                                            value="91091093316"
-                                        />
-                                        <button
-                                            class="pink_line"
-                                            onclick="copy_to_clipboard3()"
                                         >
                                             복사하기
                                         </button>
@@ -657,10 +531,12 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="guide_tit">목포 출발 버스</div>
+                                    <div class="guide_tit">
+                                        목포 출발 대절 버스
+                                    </div>
                                     <div class="guide_span">
-                                        오전 06시 10분<br />
-                                        남악도청 건너편 시외버스 정류장 출발
+                                        2024년 10월 26일 오전 06시 10분<br />
+                                        남악도청 건너편 시외버스 정류장에서 출발
                                     </div>
                                 </li>
                             </ul>
